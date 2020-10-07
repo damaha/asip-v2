@@ -34,3 +34,17 @@ A function that extracts patches of valid data from the scenes
 1. fill out the user-parameters in the top of the script.
 
 2. `python build_dataset_v2.py` 
+
+3. A folder with patches saved in subfolders for each scene is produced
+
+```
+#Load on patch
+path = #path to root folder of extracted patches
+my_dict = json.load(open(path+"20181004T180221/polygon2sic.json"))
+
+x_ = np.load(path+"20181004T180221/patch0_x.npy")
+amsr_ = np.load(path+"20181004T180221/patch0_amsr.npy")
+y_ = np.load(path+"20181004T180221/patch0_y.npy")
+y_ = np.expand_dims(np.vectorize(my_dict.get, otypes=[np.float32])(y_.astype(str)), axis=-1)
+```
+        
