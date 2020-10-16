@@ -37,7 +37,7 @@ A function that extracts patches of valid data from the scenes
 3. A folder with patches saved in subfolders for each scene is produced
 
 ```
-#Load on patch
+#Load one patch
 path = #path to root folder of extracted patches
 my_dict = json.load(open(path+"20181004T180221/polygon2sic.json"))
 
