@@ -1,11 +1,10 @@
-# asip-v2
-Code for the ASIP, AI4ARCTIC projects on sea ice prediction in the arctic from Sentinel-1 images.
-
-
-
 # ASIP Version 2 - Automated downstream Sea Ice Products code repository
 
-Code for the ASIP, AI4ARCTIC projects on sea ice prediction in the arctic from Sentinel-1 images. dataset can be found here: [ASIP-v2](https://data.dtu.dk/articles/dataset/AI4Arctic_ASIP_Sea_Ice_Dataset_-_version_2/13011134)
+Code for the ASIP, AI4ARCTIC projects on sea ice prediction in the arctic from Sentinel-1 images. dataset can be found here: [ASIP-v2](https://data.dtu.dk/articles/dataset/AI4Arctic_ASIP_Sea_Ice_Dataset_-_version_2/13011134). If you publish on the basis of this repository or the dataset, please cite the following paper if relevant for your work: Malmgren-Hansen, David, et al. "A Convolutional Neural Network Architecture for Sentinel-1 and AMSR2 Data Fusion." IEEE Transactions on Geoscience and Remote Sensing (2020).
+
+
+### DISCLAIMER: This code project is released as it without guarentees and extensive testing. It is meant to guide and help researchers get started on sea ice modelling with convolutional neural networks and since project funding finished in 2020 there will not be future updates.
+
 
 **Dependencies: Python libraries needed to run this code**
 
