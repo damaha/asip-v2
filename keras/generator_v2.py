@@ -6,7 +6,7 @@ import tensorflow.keras, json
 class asip_generator(tensorflow.keras.utils.Sequence):
     'Generates data for Keras'
     def __init__(self, file_ids, icethreshold, batch_size, dim=(300,300), return_files=False, 
-                 shuffle=True, crops=1, nersc=False, extdata=False):
+                 shuffle=True, crops=1):
 
         'Initialization'
         self.ice_threshold = icethreshold
@@ -18,7 +18,6 @@ class asip_generator(tensorflow.keras.utils.Sequence):
         self.shuffle = shuffle
         self.crops = crops
         self.dim = dim
-        self.extdata = extdata
 
         fil = np.load(file_ids[0]+"_x.npy")
         h, w, c = fil.shape

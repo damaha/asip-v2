@@ -52,7 +52,7 @@ param = {"modelname" : "model2-dtu-400",
          "period_weights" : 10,
          "seed" : 18374,
          "ice_threshold" : None,
-         "path" : "", ### PATH TO DATASET ###
+         "path" : "", ### PATH TO DATASET FILE LIST ###
          "dim" : (400,400), 
          "crops" : 4, 
          "nersc" : False,
@@ -73,12 +73,10 @@ train_files = np.array(files)[np.invert(test_train_ind)]
 
 train_generator = asip_generator(train_files, None, param["batchsize"], 
                                  dim=param["dim"], 
-                                 crops=param["crops"], sub_f=param["sub_f"], 
-                                 nersc=param["nersc"], extdata=param["extdata"])
+                                 crops=param["crops"], sub_f=param["sub_f"])
 test_generator = asip_generator(test_files, None, param["batchsize"], 
                                  dim=param["dim"], 
-                                 crops=param["crops"], sub_f=param["sub_f"], 
-                                 nersc=param["nersc"], extdata=param["extdata"])
+                                 crops=param["crops"], sub_f=param["sub_f"])
 nb_trainsamples = train_generator.nb_samples
 nb_testsamples = test_generator.nb_samples
 batch = test_generator.__getitem__(0)

@@ -20,3 +20,23 @@ When the model has been trained this script produces a number of different files
 * modelname_history.json - This files stores several information about the training procedure and history (train- and validation accuracy/loss).
 
 * modelname.log - In this file loss information is appended during training so one can follow how the training of the model progress. When the training is done the same information is available in modelname_history.json.
+
+**Example of Use**
+``` 
+$ python train_model.py
+```
+
+### generator_v2.py
+Contains a generator function for the dataset exported by `../build_dataset_v2.py` to be used with the 
+
+**Example of Use**
+``` 
+training_generator = asip_generator(
+                        file_ids,           # List of files
+                        icethreshold,       # between 0,1 for thresholding the sea ice charts for binary masks, or `None` for returning the sea ice concentration.
+                        batch_size,         # Number of samples per batch
+                        dim=(300,300),      # Size 
+                        return_files=False, # If True, returns filenames for each batch
+                        shuffle=True,       # Shuffle file list. 
+                        crops=4,            # Number of crops to return per image file in the file_ids)
+```
