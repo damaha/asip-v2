@@ -106,7 +106,7 @@ def maskeddata_to_patches_v2(fil, ws, ss=None, rm_swath=0, inc=False, nersc=''):
     strides = sliding_window(data,ws,ss)
     patches = strides.reshape([np.prod(strides.shape[:3])] + list(strides.shape[3:]))
     patch_isnan = patches[:,:,:,-1:].sum(axis=(1,2,3))
-
+    del(data)
     return(patches, patch_isnan)
 
 def norm_shape(shape):
