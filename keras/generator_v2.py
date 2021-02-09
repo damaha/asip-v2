@@ -80,6 +80,6 @@ class asip_generator(tensorflow.keras.utils.Sequence):
                     if self.ice_threshold:
                         y_ = y_ > self.ice_threshold
 
-                    X[i+j,], Y[i+j,] = x_, y_
+                    X[(i*self.crops)+j,], Y[(i*self.crops)+j,] = x_, y_
 
             return([X], Y)
